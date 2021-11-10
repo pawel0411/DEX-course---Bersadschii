@@ -1,19 +1,17 @@
- if ((typeof(f)=='number'||typeof(f)=='string')&&
-     (typeof(s)=='string'||typeof(s)=='number'))
-     if ((parseFloat(f)===NaN)&&(parseFloat(s)===NaN))
-     return 0;
-     if()
+function iter(a)
+  {let sum;
+     if (Object.is(parseFloat(a),NaN)!=true)
+     {
+      return parseFloat(a);
+     }
+     else
+     if ((typeof (a)=='string')&&(typeof(parseFloat(a[1]))=='number'))
+        return +a.slice(1,a.length);
+        else
+        return 0;
+    }
 
-     // let stF=+f[0];
-     // let stS=+s[0];
-      //let cutF= f.substring().slice(1,f.substring().length);
-      //let cutS= s.substring().slice(1,s.substring().length);
-      
-    // if ((typeof(stF)==NaN)&&(typeof(stS)==NaN))
-    // return parseFloat(cutF)+parseFloat(cutS);
-     //if ((typeof(stF)!=NaN)&&(typeof(stS)==NaN))
-    // return parseFloat(f)+parseFloat(cutS);
-    // if ((typeof(stF)==NaN)&&(typeof(stS)!=NaN))
-    // return parseFloat(cutF)+parseFloat(s);
-     return parseFloat(f)+parseFloat(s);
+  // Должны складываться только строки и числа
+  // Постарайтесь сложить как можно больше пар и обойти NaN случаи
+  return iter(f)+iter(s);
       
