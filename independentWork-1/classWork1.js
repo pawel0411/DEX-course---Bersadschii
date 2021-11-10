@@ -1,9 +1,12 @@
- let dayToday=new Date();
-  
-  if (dayToday.getDay()==s.getDay()&& dayToday.getMonth()==s.getMonth())
-  {
-    
-    let IsPremia=get.Day()*(get.Month()+1)+t*10/100;
-    IsPremia=(IsPremia/10).toFixed(0)*10;
-    return `У ${f} сегодня праздник его премия составляет ${IsPremia}`;
-  }
+  var mass=s.split('T');
+  let dates=new Date();
+var YsMoDa=mass[0].split('-');
+
+
+   if (YsMoDa[1]-1==dates.getMonth().toString()&&YsMoDa[2]==dates.getDate().toString())
+   {
+     let IsPremia= (((+YsMoDa[1])*(+YsMoDa[2])+t*10/100)/10).toFixed(0)*10;
+     return `У ${f} сегодня праздник его премия составляет ${IsPremia}`;
+   }
+//Если дата совпадает, выводить ее начальнику по типу “У Василия Иванова сегодня праздник, его премия составляет {...}”
+//Начальство придумало следующий алгоритм подсчета премий: к 10% от зп сотрудника прибавляется выражение (день умножить на месяц).
