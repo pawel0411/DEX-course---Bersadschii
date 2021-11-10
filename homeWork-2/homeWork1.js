@@ -5,7 +5,7 @@ function iter(a)
       return parseFloat(a);
      }
      else
-     if ((typeof (a)=='string')&&(typeof(parseFloat(a[1]))=='number'))
+     if ((typeof (a)=='string')&&(typeof(parseFloat(a[1]))=='number')&&(a.length>1))
         return parseFloat(a.slice(1,a.length));
         else
         return 0;
