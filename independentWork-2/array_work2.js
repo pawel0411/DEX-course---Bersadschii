@@ -8,7 +8,7 @@ function sumInput()
  {
    let elem=prompt('введите значение','');
    let check=Object.is(+elem,NaN);
-     if ((check===false)&&(elem!='')&&(elem!=null))
+     if ((check===false)&&(elem!='')&&(elem!=null)&&(elem[0]!=' '))
      {
      sum+=+elem;
      sumInput();
