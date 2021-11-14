@@ -1,9 +1,10 @@
  let fruits;
-  for (let fruit of cartItem)
-  { if (fruit.name=="Пицца с анчоусами")
+  for (let fruit of cartData)
+  { if (fruit.name==="Пицца с анчоусами")
       fruits = Object.assign({}, fruit);
   }
   fruits.addedIngredients.count++;
-  return fruits;
+  console.log( fruits); 
+  console.log(fruits.addedIngredients.count);
 //TODO: сделать копию элемента "Пицца с анчоусами"
   // После увеличить кол-во добавленного ингредиента
