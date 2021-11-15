@@ -12,7 +12,7 @@
   flag=true;
  }
   return {
-    total: tot_Sum>500,
+    total: tot_Sum>1000,
     oneBigPosition: mass.length>0,
     notDiscounted: flag
   };
