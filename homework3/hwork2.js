@@ -13,3 +13,13 @@
 ------
 let nameProd="Пицца с анчоусами";
 let fruits= cartData.find(item => item.name === nameProd);
+------
+let fruits;
+  for (let fruit of cartData)
+  { if (fruit.name==="Пицца с анчоусами")
+      fruits = Object.assign({}, fruit);
+  }
+let doublePrices = Object.fromEntries(
+    Object.entries(fruits.addedIngredients).map(([key, value]) => (key== 'count')?[key, value]: [key, value]));
+ 
+    console.log(doublePrices);
