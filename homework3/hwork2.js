@@ -8,3 +8,8 @@
   console.log(fruits.addedIngredients.count);
 //TODO: сделать копию элемента "Пицца с анчоусами"
   // После увеличить кол-во добавленного ингредиента
+
+
+------
+let nameProd="Пицца с анчоусами";
+let fruits= cartData.find(item => item.name === nameProd);
