@@ -1,3 +1,4 @@
+let date="2021-10-31T20:55:15.220Z";
 let now = new Date();
   let arr1=cartData.filter(item => item.date === date);
   let arr =[];
@@ -22,7 +23,8 @@ let now = new Date();
   }
 }
 let mass = arr.concat(cartData);
-return mass;
+console.log(mass);
+//return mass;
   //TODO: нужно повторить заказ за выбранную дату
   // дублиовать соответствующие элементы
   // поставить в начало спиcка
