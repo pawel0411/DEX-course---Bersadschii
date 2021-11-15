@@ -1,13 +1,13 @@
  //TODO: Нужно добавить поле discount(oldPrice - price)
   // убрать поле oldPrice
- for (let fruit of cartData) {
-  if((fruit.oldPrice-fruit.price)>0)
-  fruit.discount=fruit.oldPrice-fruit.price;
+for (let i=0; i<cartData.length; i++) {
+  if((cartData[i].oldPrice-cartData[i].price)>0)
+  cartData[i].discount=cartData[i].oldPrice-cartData[i].price;
 } 
-for (let fruit of cartData) 
- delete fruit.oldPrice;
+for (let j=0;j<cartData.length; j++) 
+ delete cartData[j].oldPrice;
+
  for (let i=0; i<cartData.length; i++) {
   let name=cartData[i];
-  console.log( `${name.id} ${name.type}${name.price}
-  ${name.name}${name.count} ${name.date} ${name.discount}`); 
+  console.log(name); 
  }
