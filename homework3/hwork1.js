@@ -9,5 +9,6 @@ for (let j=0;j<cartData.length; j++)
 
  for (let i=0; i<cartData.length; i++) {
   let name=cartData[i];
-  console.log(name); 
+ // console.log(name); 
  }
+return cartData;
