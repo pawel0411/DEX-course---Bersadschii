@@ -6,15 +6,17 @@ work = spy(work);
 
 console.log(work(1, 2)); // 3
 console.log(work(4, 5)); // 9
+console.log(work(4, 5)); // 9
 
 for (let args of work.calls) {
   console.log( 'call:' + args.join() ); // "call:1,2", "call:4,5"
 }
 function spy(func) {
-
+  let count = 0;
   function wrapper(...args) {
-    console.log(...args);
+    //console.log(...args);
     wrapper.calls.push(args);
+    console.log(++count);
     return func.apply(this, arguments);
   }
 
@@ -22,5 +24,6 @@ function spy(func) {
 
   return wrapper;
 }
+
 //TODO: Напишите функцию счётчик вызовов, должна принимать название и функцию, а возвращать функцию
 // Выводит в консоль, в момент вызова функции из параметров, кол-во вызовов
