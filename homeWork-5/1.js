@@ -1,9 +1,9 @@
-//работает
+// так работает
 
 const getData = (str) => {
 
   let promise = new Promise(function(resolve, reject) {
-    if (false)
+    if (false) // или ответ от str
     reject(new Error('ошибка'));
     resolve("все отлично");
   });
@@ -33,9 +33,7 @@ const answer =(compareText)=>
 
 
 -------------
-  // Написать 2 функции,
-// первая обработает ответ от compareText (положительный и отрицательный)
-// TODO: первая функция использует then и catch
+//пробная
 const getData = (str) => { 
   compareText
   .then(=>{
