@@ -1,3 +1,26 @@
+//работает
+
+const getData = (str) => {
+
+  let promise = new Promise(function(resolve, reject) {
+    if (false)
+    reject(new Error('ошибка'));
+    resolve("все отлично");
+  });
+let answer;
+ promise.then(resolve => answer= "положительно");
+ promise.catch(reject=> answer="отрицательно"); 
+return answer;
+};
+// первая обработает ответ от compareText (положительный и отрицательный)
+// TODO: первая функция использует then и catch
+
+
+
+---------------------------------------------
+
+// мои пробные
+  ******************************************
 import { compareText } from "./data";
 const answer =(compareText)=>
 {
@@ -13,8 +36,7 @@ const answer =(compareText)=>
   // Написать 2 функции,
 // первая обработает ответ от compareText (положительный и отрицательный)
 // TODO: первая функция использует then и catch
-const getData = (str) => {
-  
+const getData = (str) => { 
   compareText
   .then(=>{
     return "положительный";
