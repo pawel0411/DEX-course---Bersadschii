@@ -1,25 +1,3 @@
-const getResponse = async (str) => {
-  let promise = new Promise(function(resolve, reject) {
-    if (false) // или ответ от str
-    reject(new Error('ошибка'));
-    resolve("все отлично");
-  });
-
- promise.then(resolve => {
-   resolve= resolve +':)';
-            if (resolve.length<20)
-               resolve = resolve+ ')'.repeat(20-resolve.length)
-              alert(resolve);});
- promise.catch(reject=> {
-   reject=reject+':(';
-            if (reject.length<20)
-                reject = reject+ '('.repeat(20-reject.length)
-              alert(reject);});
-
-};
-
-getResponse("короткий текст");
-getResponse("Длинный");
 // Используя конструкции then catch
 // к положительному ответу добавьте " :)"
 // к ответу с ошибкой добавьте " :("
@@ -27,3 +5,63 @@ getResponse("Длинный");
 // скобочки нужно добавлять пока длинна не станет равна 20
 // TODO: на каждое действи должна быть отдельная конструкция then или catch
 // Например первый then для добавления " :)", второй для подсчёта количества символов и добавления недостающих
+const getResponse = async (str) => {
+  let promise = new Promise(function(resolve, reject) {
+
+    if (true) // или ответ от str
+    reject(new Error('ошибка'));
+    resolve("все отлично");
+  
+  }).then(function(result) {
+  
+    console.log(result); // 1
+  
+    return new Promise((resolve, reject) => { 
+      setTimeout(() => resolve(result+':)'), 1000);
+    });
+  
+  }).then(function(result) { 
+  
+    console.log(result); // 2
+  
+    return new Promise((resolve, reject) => {
+      setTimeout(() => resolve(result +')'.repeat(20-(result.length))), 1000);
+    });
+  
+  }).then(function(result) {
+  
+    console.log(result); // 4
+  
+  });   
+              
+ promise.catch(function(result) {
+  
+  console.log(result); // 1
+
+  return new Promise((resolve, reject) => { // (*)
+    setTimeout(() => reject(result+':('), 1000);
+  });
+
+}).catch(function(result) { // (**)
+
+  console.log(result); // 2
+
+  return new Promise((resolve, reject) => {
+    setTimeout(() => reject(result +'('.repeat(20-(result.length))), 1000);
+  });
+
+}).catch(function(result) {
+
+  console.log(result); // 4
+
+});   
+
+};
+
+
+
+
+
+getResponse("короткий текст");
+getResponse("Длинный");
+
