@@ -9,45 +9,42 @@ const getResponse = async (str) => {
   let promise = new Promise(function(resolve, reject) {
 
     if (true) // или ответ от str
-    reject(new Error('ошибка'));
-    resolve("все отлично");
+    reject(new Error('ошибкаvfkvnfknkgnb'));
+    resolve("все отличноvrrvrtbtbtbtbbb");
   
   }).then(function(result) {
-  
-    console.log(result); // 1
-  
-    return new Promise((resolve, reject) => { 
-      setTimeout(() => resolve(result+':)'), 1000);
+        return new Promise((resolve, reject) => { 
+             setTimeout(() => resolve(result+':)'), 1000);
     });
   
   }).then(function(result) { 
   
-    console.log(result); // 2
+             if (result.length<20)
+                return new Promise((resolve, reject) => {
+                setTimeout(() => resolve(result +')'.repeat(20-(result.length))), 1000)});
+       return new Promise((resolve, reject) => {
+       setTimeout(() => resolve(result), 1000);
+     });
   
-    return new Promise((resolve, reject) => {
-      setTimeout(() => resolve(result +')'.repeat(20-(result.length))), 1000);
-    });
+     }).then(function(result) {
+      console.log(result); // 4
   
-  }).then(function(result) {
-  
-    console.log(result); // 4
-  
-  });   
+     });   
               
  promise.catch(function(result) {
-  
-  console.log(result); // 1
 
-  return new Promise((resolve, reject) => { // (*)
-    setTimeout(() => reject(result+':('), 1000);
+       return new Promise((resolve, reject) => { // (*)
+      setTimeout(() => reject(result+':('), 1000);
   });
 
 }).catch(function(result) { // (**)
-
-  console.log(result); // 2
-
+ 
+  if (result.length<20)
   return new Promise((resolve, reject) => {
-    setTimeout(() => reject(result +'('.repeat(20-(result.length))), 1000);
+    setTimeout(() => reject(result +'('.repeat(20-(result.length))), 1000)});
+    return new Promise((resolve, reject) => {
+      setTimeout(() => reject(result), 1000);
+
   });
 
 }).catch(function(result) {
@@ -57,11 +54,3 @@ const getResponse = async (str) => {
 });   
 
 };
-
-
-
-
-
-getResponse("короткий текст");
-getResponse("Длинный");
-
