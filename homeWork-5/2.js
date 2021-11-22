@@ -1,7 +1,7 @@
 const getData = (str) => {
   try
   {
-    if (str=="короткий текст")
+    if (str=="положительно")
     console.log("Success: получен "+ str);
     else
     throw new SyntaxError("в сообщении "+ str+"есть ошибка");
