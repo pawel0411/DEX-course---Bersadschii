@@ -46,7 +46,7 @@ export const FormCompomemt = () => {
           <label htmlFor="">email с множественным вводом</label>
           <input type="email" />
           <label htmlFor="podskaska">поле с подсказкой</label>
-          <input id="podskaska" type="text" value="подсказка" readOnly />
+          <input id="podskaska" type="text"  placeholder="подсказка" readOnly />
         </fieldset>
           <fieldset>
           <legend>Подформа 3</legend>
