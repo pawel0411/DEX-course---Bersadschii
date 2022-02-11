@@ -1,0 +1,78 @@
+body{
+    height: 3049px;
+    width:1922px;
+}
+.wrapper{
+    margin-top: 111px;
+    margin-right: 226px;
+    margin-left:165px;
+    margin-bottom:242px ;
+    font-family: Montserrat;
+    font-style: normal;
+    height: 500px;
+}
+.inputOne{
+    width:114px;
+    height: 36px;
+   color: #303030;
+   line-height: 24px;
+   font-size:48px;
+   padding-bottom: 10px;
+}
+.login1{
+   color: #707070;
+   line-height: 24px;
+   font-size:14px;
+   width:366px;
+   height: 18px;
+   font-weight:500;
+}
+input{
+    width: 366px;
+    height: 40px;
+    border-radius: 4px;
+       
+}
+.box{
+    margin-top: 42px;
+    margin-bottom: 8px;
+}
+.search{
+margin-top: 50px;
+}
+.multSelect{
+    margin-bottom:34px;
+    width: 366px;
+    height: 40px;
+    border-radius: 4px;
+    border: 0.5px solid #d1d1d1
+    
+}
+.input1{
+    border-radius: 0px;
+}
+.input2{
+    border-radius: 4px 4px 0px 0px;
+    background-color: #C60E2E;
+    color: #fff;
+}
+.input3{
+    border-radius: 0px 0px 4px 4px;
+}
+.inp{
+    width: 88px;
+    height: 40px;
+}
+.multSelect1{
+    width: 372px;
+    height: 44px;
+    border-radius: 4px;
+    border: 0.5px solid #d1d1d1;
+    margin-bottom: 40px;
+}
+select.inp{
+    margin-top: 10px;
+    width: 95px;
+    height: 45px;
+    margin-bottom: 40px;
+}
