@@ -10,6 +10,7 @@ body{
     font-family: Montserrat;
     font-style: normal;
     height: 500px;
+    float: left;
 }
 .inputOne{
     width:114px;
@@ -76,3 +77,44 @@ select.inp{
     height: 45px;
     margin-bottom: 40px;
 }
+.wrapper2{
+    margin-top: 111px;
+    margin-right: 226px;
+    font-family: Montserrat;
+    font-style: normal;
+    height: 750px;
+    float: left;
+}
+.btnsml input{
+    width: 104px;
+    height: 40px;
+}
+.btnleft{
+    float: left;
+    margin-right: 100px;
+}  
+.btnright input{
+    width: 171px;
+}
+.box input[type="button"]{
+    margin-top: 12px;
+    margin-bottom: 4px;
+}  
+.logobtn{
+    margin-top: 40px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    border: 4px solid rgb(202, 126, 25);
+   
+    background-color: #081055;
+}
+.oneimg{
+    position: relative;
+}
+.twoimg{
+    left: -120px; 
+    top: 25px; 
+    z-index: 2;
+}
+
+
